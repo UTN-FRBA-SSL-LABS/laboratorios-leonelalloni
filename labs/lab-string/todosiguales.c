@@ -13,6 +13,16 @@
 
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
-    /* TODO */
+    int iguales = 1;
+    
+    if (argv[1] != NULL)
+
+
+        for (char **arg = argv + 2; *arg != NULL && iguales; arg++)
+
+            iguales = AreEqual(*arg, argv[1]);
+
+    printf("%d\n", iguales);
+
     return 0;
 }

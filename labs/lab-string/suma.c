@@ -13,6 +13,11 @@
 
 int main(int argc, char *argv[]) {
     (void)argc; (void)argv;
-    /* TODO */
+    int t = 0;
+
+    for (char **arg = argv + 1; *arg != NULL; arg++)
+        t += ToInteger(*arg);
+    printf("%d\n", t);
+    
     return 0;
 }
